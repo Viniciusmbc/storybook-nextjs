@@ -1,0 +1,9 @@
+npm ERR! code 1
+npm ERR! path /home/crie/storybook-nextjs/node_modules/sharp
+npm ERR! command failed
+npm ERR! command sh -c (node install/libvips && node install/dll-copy && prebuild-install) || (node install/can-compile && node-gyp rebuild && node install/dll-copy)
+npm ERR! sharp: Downloading https://github.com/lovell/sharp-libvips/releases/download/v8.14.5/libvips-8.14.5-linux-x64.tar.br
+npm ERR! sharp: Please see https://sharp.pixelplumbing.com/install for required dependencies
+npm ERR! sharp: Installation error: Request timed out
+
+npm ERR! A complete log of this run can be found in: /home/crie/.npm/_logs/2023-12-08T22_01_00_637Z-debug-0.log
