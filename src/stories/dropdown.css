@@ -1,0 +1,98 @@
+#mount {
+  margin: 100px;
+}
+
+.dropdown {
+  position: relative;
+  border-radius: 4px;
+  border: 1px solid var(--01, #7c5dfa);
+  background: #fff;
+  border-radius: 1px;
+  margin-top: 9px;
+  font-weight: 700;
+  line-height: 15px;
+  max-width: 240px; /* Maximum width */
+  width: 100%; /* Responsive width */
+}
+
+.dropdown-label {
+  color: #7e88c3;
+  font-family: "League Spartan", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: -0.25px;
+}
+
+.dropdown__arrow {
+  position: absolute;
+  left: 100%; /* Adjust this value as needed to align the arrow icon */
+  top: 50%;
+  transform: translateY(-50%); /* Vertically center the arrow */
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 20px solid #eee;
+  border-radius: 3px;
+}
+
+.dropdown__list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  border-top: none;
+  max-height: 0;
+  padding: 0;
+  overflow: hidden;
+  box-shadow: 0px 10px 20px 0px rgba(72, 84, 159, 0.25);
+
+  transition: max-height 0.6s ease-out;
+}
+
+.dropdown__list--active {
+  max-height: 1000px;
+  padding: 0;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0px 10px 20px 0px rgba(72, 84, 159, 0.25);
+
+  opacity: 1;
+}
+
+.dropdown__list-item {
+  list-style: none;
+  padding: 15px;
+  border-bottom: 1px solid #dfe3fa; /* Add a border to each list item */
+}
+
+.dropdown__list-item:last-child {
+  border-bottom: none; /* Remove the border from the last item */
+}
+
+.dropdown__list-item--active,
+.dropdown__list-item:hover {
+  color: #7c5dfa;
+  cursor: pointer;
+}
+
+.dropdown__toggle:hover {
+  background: #fff;
+}
+.dropdown__toggle {
+  display: flex; /* Use flexbox */
+  align-items: center; /* Center items vertically */
+  justify-content: space-between; /* Space between the title and icon */
+  padding: 18px; /* Uniform padding */
+}
+
+.dropdown__toggle svg {
+  margin-left: 2rem; /* Pushes the SVG to the right */
+  order: 2; /* Ensures the SVG is placed after the title */
+}
+
+.dropdown__toggle span {
+  order: 1;
+}

@@ -1,7 +1,6 @@
 import React from 'react';
-
-import { Button } from './Button';
 import './header.css';
+import Image from 'next/image';
 
 type User = {
   name: string;
@@ -16,41 +15,37 @@ interface HeaderProps {
 
 export const Header = ({ user, onLogin, onLogout, onCreateAccount }: HeaderProps) => (
   <header>
-    <div className="storybook-header">
+    <nav className="storybook-header">
       <div>
-        <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-          <g fill="none" fillRule="evenodd">
-            <path
-              d="M10 0h12a10 10 0 0110 10v12a10 10 0 01-10 10H10A10 10 0 010 22V10A10 10 0 0110 0z"
-              fill="#FFF"
-            />
-            <path
-              d="M5.3 10.6l10.4 6v11.1l-10.4-6v-11zm11.4-6.2l9.7 5.5-9.7 5.6V4.4z"
-              fill="#555AB9"
-            />
-            <path
-              d="M27.2 10.6v11.2l-10.5 6V16.5l10.5-6zM15.7 4.4v11L6 10l9.7-5.5z"
-              fill="#91BAF8"
-            />
+        <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0H52C63.0457 0 72 8.95431 72 20V52C72 63.0457 63.0457 72 52 72H0V0Z" fill="#7C5DFA" />
+          <mask id="mask0_0_1479" style={{ maskType: 'luminance' }} maskUnits="userSpaceOnUse" x="0" y="0" width="72" height="72">
+            <path d="M0 0H52C63.0457 0 72 8.95431 72 20V52C72 63.0457 63.0457 72 52 72H0V0Z" fill="white" />
+          </mask>
+          <g mask="url(#mask0_0_1479)">
+            <path d="M72 36.3496H20C8.95431 36.3496 0 45.3039 0 56.3496V88.3496C0 99.3953 8.95431 108.35 20 108.35H72V36.3496Z" fill="#9277FF" />
           </g>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M29.486 23.0003L36 35.8995L42.514 23.0003C46.9652 25.3092 50 29.9105 50 35.21C50 42.8261 43.732 49.0002 36 49.0002C28.268 49.0002 22 42.8261 22 35.21C22 29.9105 25.0348 25.3092 29.486 23.0003Z" fill="white" />
         </svg>
-        <h1>Acme</h1>
+
       </div>
-      <div>
-        {user ? (
-          <>
-            <span className="welcome">
-              Welcome, <b>{user.name}</b>!
-            </span>
-            <Button size="small" onClick={onLogout} label="Log out" />
-          </>
-        ) : (
-          <>
-            <Button size="small" onClick={onLogin} label="Log in" />
-            <Button primary size="small" onClick={onCreateAccount} label="Sign up" />
-          </>
-        )}
+
+
+      {/* Divider and Mode Toggle */}
+      <div className="mode-toggle-container">
+
+        <button className="mode-toggle-button">
+          <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5.81724 0.900391C3.1055 0.900391 0.899414 3.10691 0.899414 5.81865C0.899414 8.53039 3.1055 10.7369 5.81724 10.7369C8.52854 10.7369 10.7351 8.53083 10.7351 5.81865C10.7351 3.10648 8.52854 0.900391 5.81724 0.900391Z" fill="noe" />
+          </svg>
+        </button>
       </div>
-    </div>
+
+      {/* Avatar Button */}
+      <button className="avatar-button">
+        <Image src="https://res.cloudinary.com/deaejawfj/image/upload/v1668457927/tribos-ux/imagemPerfilGroups_niyvl7.png" alt="Profile Icon" width={32} height={32} />
+      </button>
+    </nav>
   </header>
 );
+

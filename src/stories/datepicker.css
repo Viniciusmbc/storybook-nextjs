@@ -1,0 +1,27 @@
+.date-picker {
+  position: relative;
+  max-width: 240px; /* Same as the dropdown */
+  width: 100%; /* Responsive width */
+  border: 1px solid var(--01, #7c5dfa); /* Same border style */
+  border-radius: 4px; /* Same border radius */
+  padding: 18px; /* Same padding */
+  font-family: "League Spartan", sans-serif; /* Same font */
+  font-size: 1rem; /* Same font size */
+  font-weight: 700; /* Same font weight */
+  color: var(--08, #0c0e16);
+  background: #fff; /* Same background */
+  -webkit-appearance: none; /* Removes default styling on webkit browsers */
+  -moz-appearance: none; /* Removes default styling on Firefox */
+  appearance: none; /* Removes default browser styling */
+}
+
+/* Custom arrow icon for the date picker */
+.date-picker::-webkit-calendar-picker-indicator {
+  position: absolute;
+  right: 20px; /* Position the arrow icon */
+  top: 50%;
+  transform: translateY(-50%);
+  color: #7e88c3; /* Arrow icon color */
+  background: transparent;
+  cursor: pointer;
+}

@@ -35,7 +35,7 @@ const PlusIcon = () => (
   >
     <path
       d="M17.3131 21.0229V17.3131H21.0229V14.7328H17.3131V11.0229H14.7328V14.7328H11.0229V17.3131H14.7328V21.0229H17.3131Z"
-      fill="#7C5DFA"
+      fill="#7E88C3" // Change the fill color here
     />
   </svg>
 );
@@ -44,7 +44,7 @@ export const NewItemButton = ({
   primary = false,
   size = "medium",
   backgroundColor,
-  hoverBackgroundColor,
+  hoverBackgroundColor = '#DFE3FA',
   label,
   ...props
 }: ButtonWithPlus) => {
@@ -54,26 +54,23 @@ export const NewItemButton = ({
   return (
     <button
       type="button"
-      className={["storybook-button", `storybook-button--${size}`, mode].join(
-        " "
-      )}
+      className={["storybook-button-with-plus", `storybook-button-with-plus--${size}`, mode].join(" ")}
       style={{ backgroundColor }}
       {...props}
     >
       <span className="icon-wrapper">
         <PlusIcon />
       </span>
-      {label}
+      <span className="storybook-button-text">{label}</span>
 
       <style jsx>{`
-        button {
+        .storybook-button-with-plus {
           display: flex;
           align-items: center;
           justify-content: center;
-          color: black;
           padding-left: 8px; // Padding on the left side of the button
         }
-        button:hover {
+        .storybook-button-with-plus:hover {
           background-color: ${hoverBackgroundColor || backgroundColor};
         }
         .icon-wrapper {

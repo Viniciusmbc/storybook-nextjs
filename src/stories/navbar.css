@@ -1,0 +1,56 @@
+/* Navbar.module.css */
+
+.navbar-container {
+  width: 375px;
+  height: 72px;
+  position: relative;
+  background: #373b53;
+}
+
+.logo-section {
+  width: 72px;
+  height: 72px;
+  position: absolute;
+}
+
+.logo-background {
+  width: 72px;
+  height: 72px;
+  position: absolute;
+  background: #7c5dfa;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.logo-rotated {
+  transform: rotate(180deg);
+  transform-origin: 0 0;
+  background: #9277ff;
+}
+
+.logo-image {
+  width: 28px;
+  height: 26px;
+  position: absolute;
+}
+
+.profile-icon {
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  border-radius: 9999px;
+}
+
+.divider {
+  width: 1px;
+  height: 72px;
+  position: absolute;
+  background: #494e6e;
+}
+
+.additional-element {
+  width: 19.99px;
+  height: 19.9px;
+  position: absolute;
+  background: #7e88c3;
+}
