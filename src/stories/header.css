@@ -1,48 +1,79 @@
 /* Styles for Storybook Header */
-
 .storybook-header {
   background: #1e2139;
   display: flex;
-  height: 72px;
+  height: 4.5rem; /* 72px converted to rem */
   align-items: center;
   max-height: 100%;
   justify-content: space-between;
+  border-radius: 0px 0px 0px 0px; 
+  transition: all 0.3s; /* Suaviza a transição entre os estilos */
 }
 
 /* SVG Styles */
 .logo-svg {
-  display: inline-block;
-  padding: 0;
-  margin: 0;
-  margin-right: 10px; /* Add margin for spacing */
+  width: 100%; /* Ocupa 100% da largura do contêiner */
+  height: auto; /* Mantém a proporção */
+  max-width: 4.5rem; /* Tamanho máximo que o SVG pode alcançar */
 }
 
-/* Button Spacing */
-.storybook-header button + button {
-  margin-left: 10px;
-}
-
-.avatar-button {
-  background: none; /* Removes any background */
-  border-left: 1px solid #494e6e; /* Sets only the left border */
-  padding: 1.25rem 24px;
-  height: 100%;
-  border-right: none; /* Removes the right border */
-  border-bottom: none; /* Removes the bottom border */
-  border-top: none; /* Removes the top border */
-  /* Removes padding */
-  cursor: pointer; /* Changes cursor to pointer to indicate it's clickable */
-}
 
 .mode-toggle-button {
-  background: none; /* Removes any background */
-  border: none; /* Removes the border */
-
-  cursor: pointer; /* Changes cursor to pointer to indicate it's clickable */
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-right: 1.6875rem;
 }
 
 .left-buttons {
   display: flex;
+  
   flex-direction: row;
   align-items: center;
+}
+
+.avatar-button {
+  background: none;
+  border-left: 1px solid #494e6e;
+  padding: 1.25rem 1.5rem; /* Adjusted padding */
+  border-right: none;
+  border-bottom: none;
+  border-top: none;
+  cursor: pointer;
+  box-sizing: border-box;
+  height: 4.5rem; /* 72px converted to rem */
+}
+
+/* Media Query for Sidebar Mode (screens above 48rem) */
+@media (min-width: 48rem) { /* 768px converted to rem */
+  .storybook-header {
+    flex-direction: column;
+    height: 100vh;
+    width: 6.4375rem; 
+    position: fixed;
+    border-radius: 0px 27px 21px 0px; 
+    top: 0;
+    left: 0;
+  }
+
+  .left-buttons {
+    flex-direction: column;
+    width: 100%; /* Ajuste para ocupar a largura total da sidebar */
+  }
+
+  .mode-toggle-button {
+   margin-bottom: 2rem;
+   margin-right: 0;
+  }
+
+  .logo-svg {
+    max-width: 6.4375rem; /* Tamanho menor para telas menores */
+  }
+
+  .avatar-button {
+    border-left: none; /* Removendo a borda esquerda se não for necessária */
+    border-top: 1px solid #494e6e; /* Bordas superiores */
+    width: 100%; /* Largura total para preencher a sidebar */
+    padding: 1.25rem 1.5rem; /* Ajuste do padding conforme necessário */
+  }
 }

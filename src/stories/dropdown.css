@@ -82,10 +82,11 @@
   background: #fff;
 }
 .dropdown__toggle {
-  display: flex; /* Use flexbox */
+  display: inline-flex; /* Use flexbox */
   align-items: center; /* Center items vertically */
   justify-content: space-between; /* Space between the title and icon */
   padding: 18px; /* Uniform padding */
+  flex-direction: initial;
 }
 
 .dropdown__toggle svg {

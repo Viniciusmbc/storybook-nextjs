@@ -26,28 +26,28 @@ type Story = StoryObj<typeof meta>;
 export const Primary: Story = {
   args: {
     primary: true,
-    label: "Button",
+    label: "New Invoice",
     hoverBackgroundColor: "#9277FF", // Example hover color
   },
 };
 
 export const Secondary: Story = {
   args: {
-    label: "Button",
+    label: "New Invoice",
   },
 };
 
 export const Large: Story = {
   args: {
     size: "large",
-    label: "Button",
+    label: "New Invoice",
   },
 };
 
 export const Small: Story = {
   args: {
     size: "small",
-    label: "Button",
+    label: "New",
   },
 };
 
