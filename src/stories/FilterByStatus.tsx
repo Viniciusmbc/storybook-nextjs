@@ -23,7 +23,7 @@ export const FilterByStatus: React.FC<FilterByStatusProps> = ({ onSelect }) => {
   return (
     <div className="filterByStatus-container">
       <button className="filterButton" onClick={() => setShowDropdown(!showDropdown)}>
-        Filter By Status
+        Filter by status
         {!showDropdown ? (
           <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M1 1L5.2279 5.2279L9.4558 1" stroke="#7C5DFA" strokeWidth="2"/>
@@ -36,22 +36,23 @@ export const FilterByStatus: React.FC<FilterByStatusProps> = ({ onSelect }) => {
       </button>
       {showDropdown && (
         <div className="dropdown-menu">
-        {(['draft', 'pending', 'paid'] as StatusOption[]).map(status => (
-          <div key={status} className="checkbox-container">
-            <input
+          {(['draft', 'pending', 'paid'] as StatusOption[]).map(status => (
+            <div key={status} className="checkbox-container">
+             <input
               id={`status-${status}`}
+              className="css-checkbox"
               type="checkbox"
               name="status"
               value={status}
               checked={selectedStatuses.includes(status)}
               onChange={() => handleSelect(status)}
             />
-            <label htmlFor={`status-${status}`}>
+            <label htmlFor={`status-${status}`} className="label-checkbox">
               {status.charAt(0).toUpperCase() + status.slice(1)}
             </label>
-          </div>
-        ))}
-      </div>
+            </div>
+          ))}
+        </div>
       )}
     </div>
   );

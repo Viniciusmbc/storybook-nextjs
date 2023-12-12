@@ -23,6 +23,12 @@
   .dropdown-menu {
     width: 192px;
     height: 128px;
+    box-sizing: border-box;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 17px;
     flex-shrink: 0;
     border-radius: 8px;
     background: #FFF;
@@ -34,49 +40,20 @@
     z-index: 1;
   }
   
-  .dropdown-menu label {
-    padding: 8px 16px;
-    display: block;
-    cursor: pointer;
+.label-checkbox{
+  color: var(--08, #0C0E16);
+font-family: 'League Spartan';
+font-size: 15px;
+font-style: normal;
+font-weight: 700;
+line-height: 15px; /* 100% */
+letter-spacing: -0.25px;
+}
+
+
+
+  input[type="checkbox"] {
+    accent-color: #7C5DFA;
+    margin-right: 0.8125rem;
   }
 
-  label {
-    color: var(--08, #0C0E16);
-    font-family:'' League Spartan;
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 15px; /* 100% */
-    letter-spacing: -0.25px;
-  }
-  
-  label:before {
-    content: "";
-    display: inline-block;
-   
-    width: 16px;
-    height: 16px;
-    border-radius: 2px;
-    border: 1px solid var(--01, #7C5DFA);
-    background: var(--05, #DFE3FA); 
-  
-    left: 0;
-    bottom: 1px;
-    background-color: #7C5DFA;
-  }
-  
-  input[type=checkbox] {
-    display: none;
-  }
-  .checkbox label:before {
-    border-radius: 3px;
-  }
-  
-  input[type=checkbox]:checked + label:before {
-    content: "\2713";
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
-    font-size: 12px;
-    color: #fff;
-    text-align: center;
-      line-height: 12px;
-  }
