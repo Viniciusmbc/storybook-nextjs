@@ -58,10 +58,8 @@ export const NewItemButton = ({
       style={{ backgroundColor }}
       {...props}
     >
-      <span className="icon-wrapper">
-        <PlusIcon />
-      </span>
-      <span className="storybook-button-text">{label}</span>
+
+      <span className="storybook-button-text">+ {label}</span>
 
       <style jsx>{`
         .storybook-button-with-plus {
