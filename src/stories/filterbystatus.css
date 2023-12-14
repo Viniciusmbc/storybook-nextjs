@@ -1,4 +1,9 @@
 /* FilterByStatus.css */
+
+div {
+  display: flex;
+}
+
 .filterByStatus-container {
   position: relative;
   display: inline-block; /* Garante que o contêiner se ajuste ao tamanho do botão */
@@ -48,12 +53,16 @@ font-style: normal;
 font-weight: 700;
 line-height: 15px; /* 100% */
 letter-spacing: -0.25px;
+margin-bottom: 0;
 }
 
 
 
+  
   input[type="checkbox"] {
     accent-color: #7C5DFA;
     margin-right: 0.8125rem;
+    margin-bottom: 0px;
+    margin-top: 0px;
   }
 

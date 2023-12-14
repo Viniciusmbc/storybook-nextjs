@@ -33,7 +33,7 @@ export const PendingSelected: Story = {
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
-    await userEvent.click(canvas.getByText('Filter By Status'));
+    await userEvent.click(canvas.getByText('Filter by status'));
     await userEvent.click(canvas.getByText('Pending'));
   },
 };
@@ -45,7 +45,7 @@ export const PaidSelected: Story = {
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
-    await userEvent.click(canvas.getByText('Filter By Status'));
+    await userEvent.click(canvas.getByText('Filter by status'));
     await userEvent.click(canvas.getByText('Paid'));
   },
 };

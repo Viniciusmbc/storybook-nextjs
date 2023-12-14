@@ -8,7 +8,6 @@ type User = {
 
 interface HeaderProps {
   user?: User;
-  onLogin: () => void;
   onLogout: () => void;
   onCreateAccount: () => void;
   backgroundColor?: string; // Nova prop para cor de fundo
@@ -16,15 +15,7 @@ interface HeaderProps {
   mode?: 'sidebar' | 'navbar'; // Nova prop para modo de visualização
 }
 
-export const Header = ({
-  user,
-  onLogin,
-  onLogout,
-  onCreateAccount,
-  backgroundColor = '#1e2139', // Cor padrão
-  size = 'medium', // Tamanho padrão
-  mode = 'navbar', // Modo padrão
-}: HeaderProps) => (
+export const Header = () => (
   
   <header>
     <nav className="storybook-header">

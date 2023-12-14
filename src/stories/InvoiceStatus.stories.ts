@@ -1,15 +1,17 @@
+// InvoiceStatus.stories.tsx
 import React from 'react';
-import { InvoiceStatus } from './InvoiceStatus'; // Adjust the import path as needed
-import type { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
+import { InvoiceStatus } from './InvoiceStatus';
 
-const meta: Meta<typeof InvoiceStatus> = {
-  title: 'Components/InvoiceStatus',
+const meta: Meta = {
+  title: 'Design System/Atoms/InvoiceStatus',
   component: InvoiceStatus,
   parameters: {
     layout: 'centered',
   },
+  // Define argTypes if needed for controls
   argTypes: {
-    status: { control: 'text' },
+    backgroundColor: { control: 'color' },
   },
 };
 
@@ -17,37 +19,28 @@ export default meta;
 
 type Story = StoryObj<typeof InvoiceStatus>;
 
-// Story for Paid Status
-export const Paid: Story = {
-  args: {
-    status: 'Paid',
-  },
-};
-
-// Story for Pending Status
 export const Pending: Story = {
   args: {
     status: 'Pending',
+    color: '#FFA500', // Orange color for pending status
+    backgroundColor: 'rgba(51, 214, 159, 0.0571)',
+
   },
 };
 
-// Story for Draft Status
 export const Draft: Story = {
   args: {
     status: 'Draft',
+    color: '#BBBBBB', // Gray color for draft status
+    textColor: '#373B53', // Black text color for draft status
   },
 };
 
-// Story for Overdue Status
-export const Overdue: Story = {
+export const Paid: Story = {
   args: {
-    status: 'Overdue',
-  },
-};
-
-// Story for Cancelled Status
-export const Cancelled: Story = {
-  args: {
-    status: 'Cancelled',
+    status: 'Paid',
+    color: '#33D69F', // Color of the circle
+    backgroundColor: 'rgba(51, 214, 159, 0.0571)', // Semi-transparent background color
+    textColor: "#33D69F",
   },
 };

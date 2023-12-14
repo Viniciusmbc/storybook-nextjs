@@ -54,12 +54,6 @@ export const NavbarMode: StoryObj<typeof meta> = {
   },
 };
 
-export const LoggedIn: Story = {
-  args: {
-    user: {
-      name: 'Jane Doe',
-    },
-  },
-};
+
 
 export const LoggedOut: Story = {};
