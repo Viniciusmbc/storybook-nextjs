@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface Invoice {
+export interface Invoice {
   id: string;
   amount: string;
   dueDate: string;

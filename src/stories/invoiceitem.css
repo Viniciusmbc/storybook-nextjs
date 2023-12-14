@@ -1,0 +1,64 @@
+/* InvoiceItem.module.css */
+div {
+    flex-direction: row;
+}
+.invoiceItem {
+    width: 327px;
+    height: 134px;
+    flex-shrink: 0;
+  }
+  
+  .invoiceId,
+  .invoiceDueDate,
+  .invoiceClientName,
+  .invoiceAmount {
+    font-family: 'League Spartan', sans-serif;
+    word-wrap: break-word;
+  }
+  
+  .invoiceId,
+  .invoiceAmount {
+    color: #0C0E16;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 24px;
+  }
+  
+  .invoiceDueDate,
+  .invoiceClientName {
+    color: #888EB0;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 15px;
+  }
+  
+  .invoiceDueDate span {
+    color: #7E88C3;
+  }
+  
+  .arrowIcon {
+    margin-left: auto;
+  }
+  
+  /* Responsive Design */
+  @media (min-width: 48rem) {
+    .invoiceItem {
+      width: 700px;
+      display: flex;
+        flex-direction: column;
+      height: auto;
+      padding: 10px;
+    }
+  
+    .invoiceId,
+    .invoiceDueDate,
+    .invoiceClientName,
+    .invoiceAmount {
+      font-size: 12px;
+    }
+  
+    .arrowIcon {
+      margin: 10px 0 0;
+    }
+  }
+  
